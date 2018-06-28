@@ -1,0 +1,6 @@
+export const AUTH_LOGIN = 'AUTH_LOGIN';
+export const AUTH_LOGIN_CUST = 'AUTH_LOGIN_CUST';
+export const FETCHING_LOGIN = 'FETCHING_LOGIN';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT';
+export const AUTH_CHECK = 'AUTH_CHECK';
+export const UPDATE_USER_DATA = 'UPDATE_USER_DATA';
