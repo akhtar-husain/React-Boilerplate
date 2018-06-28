@@ -7,17 +7,17 @@
 git clone https://github.com/akhtar-husain/React-Boilerplate.git
 ```
 
-### Change directory to the working directory and type-
+### Change directory to the working directory and run following command-
 ``` 
 npm install
 ```
 
-### To start dev server, run-
+### To start dev server, run following command-
 ``` 
 npm start
 ```
 
-### To generate build, run-
+### To generate build, run following command-
 ``` 
 npm run build
 ```
