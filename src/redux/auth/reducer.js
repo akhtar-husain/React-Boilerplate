@@ -5,7 +5,7 @@ const initialState = {
   isAdmin: false,
   user: {},
   loading: false,
-  jwtToken
+  jwtToken: ''
 };
 
 const Auth = (state = initialState, { type, payload = null }) => {

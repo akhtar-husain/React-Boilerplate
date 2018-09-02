@@ -8,7 +8,7 @@ import auth  from './redux/auth/action';
 import Routes from './routes';
 import { Loader } from './components/Common/Loader';
 
-store.dispatch(auth.authCheck());
+// store.dispatch(auth.authCheck());
 
 render(
     <Provider store={store}>

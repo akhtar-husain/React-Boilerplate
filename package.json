@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --env.NODE_ENV=development --env.production=false --progress -p --config=webpack.config.js",
+    "start": "webpack-dev-server --hot --mode development --env.NODE_ENV=development --env.production=false --progress -p --config=webpack.config.js",
     "build": "webpack --mode production --env.NODE_ENV=production --env.production --progress -p --hide-modules --config=webpack.prod.config.js"
   },
-  "keywords": ["reactjs", "redux", "redux-thunk", "webpack", "react boilerplate"],
+  "keywords": [
+    "reactjs",
+    "redux",
+    "redux-thunk",
+    "webpack",
+    "react boilerplate"
+  ],
   "author": "Akhtar Husain <dev.akhtarhusain@gmail.com>",
   "license": "ISC",
   "devDependencies": {

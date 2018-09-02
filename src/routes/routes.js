@@ -4,17 +4,12 @@ import {
   Switch
 } from 'react-router-dom';
 import { browserHistory, Route } from 'react-router';
+import Home from '../components/Home';
 
 const Routes = () => (
   <Router history={browserHistory} basename={'/'}>
     <Switch>
-      {/* 
-        Add all your routes here
-
-        Example
-        <Route path="/" component={Home} />
-        <Route component={notFound} />
-      */}
+      <Route path="/" component={Home} />
     </Switch>
   </Router>
 );
