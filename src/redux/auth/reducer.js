@@ -1,4 +1,5 @@
 import * as actionTypes from './action-type';
+import { REHYDRATE } from 'redux-persist'
 
 const initialState = {
   isAuthenticated: false,
@@ -10,6 +11,11 @@ const initialState = {
 
 const Auth = (state = initialState, { type, payload = null }) => {
   switch (type) {
+    /* case REHYDRATE:
+    return {
+      ...state,
+      rehydrated: true
+    } */
     case actionTypes.FETCHING_LOGIN:
       return Object.assign({}, state, {
         ...state,
@@ -21,7 +27,7 @@ const Auth = (state = initialState, { type, payload = null }) => {
       return checkAuth(state);
     case actionTypes.AUTH_LOGOUT:
       return logout(state);
-    default:
+    default: 
       return state;
   }
 };

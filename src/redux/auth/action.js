@@ -29,6 +29,7 @@ const updateUserData = (payload) => {
 }
 
 export default {
+  fetchingLogin,
   authLogin,
   authLogout,
   authCheck,

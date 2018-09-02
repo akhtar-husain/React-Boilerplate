@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "dotenv-webpack": "^1.5.7",
+    "localforage": "^1.7.2",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

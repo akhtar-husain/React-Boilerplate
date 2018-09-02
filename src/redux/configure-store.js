@@ -1,28 +1,34 @@
-import {createStore, compose, applyMiddleware} from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import { persistReducer, persistStore } from "redux-persist";
 import logger from 'redux-logger';
-import storage from 'redux-persist/lib/storage';
-import rootReducer from "./reducers";
+import { persistStore } from "redux-persist";
+import persistedReducers from "./reducers";
 
-const persistConfig = {
-    key: 'react',
-    storage
-};
-const persistedReducer = persistReducer(persistConfig, rootReducer);
 let middlewares = [ReduxThunk];
 /* 
  * NODE_ENV is defined in webpack config file.
  * for development -> webpack.config.js
  * for production -> webpack.prod.config.js
  */
+
+console.log('NODE_ENV', process.env.NODE_ENV);
 if (NODE_ENV !== 'production') {
-    middlewares.push(logger);
+  middlewares.push(logger);
 }
 
-export const store = createStore(
-    persistedReducer,
-    compose(applyMiddleware(...middlewares))
+const store = createStore(
+  persistedReducers,
+  {},
+  compose(applyMiddleware(...middlewares))
 );
-export const persistor = persistStore(store);
+
+const persistor = persistStore(store, { timeout: false }, (err) => {
+  if (err) {
+    console.warn('Error:', err);
+  }
+});
+export {
+  store,
+  persistor
+}
 
