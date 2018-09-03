@@ -6,7 +6,8 @@ delete module.exports.devtool;
 module.exports.output.publicPath = 'http://wonderprojectdesk.com/delgate/';
 module.exports.plugins.push(
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
+    'process.env.NODE_ENV': JSON.stringify('production'),
+    'NODE_ENV': JSON.stringify('production')
   })
 );
 module.exports.optimization = {
