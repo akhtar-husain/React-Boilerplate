@@ -12,6 +12,11 @@ git clone https://github.com/akhtar-husain/React-Boilerplate.git
 npm install
 ```
 
+### Create .env file in root and paste the contents from .env.example file, set the apiURL in .env file-
+``` 
+touch .env
+```
+
 ### To start dev server, run following command-
 ``` 
 npm start
