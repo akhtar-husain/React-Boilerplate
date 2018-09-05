@@ -21,7 +21,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public/assets'),
     stats: 'errors-only',
     open: true,
-    port: 8080,
+    port: 3030,
     compress: true,
     historyApiFallback: true,
     contentBase: './'
