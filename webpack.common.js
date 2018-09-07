@@ -4,21 +4,21 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractPlugin = new ExtractTextPlugin({
-  filename: './style.css'
+  filename: 'css/style.css'
 });
 
 module.exports = {
   entry: ["babel-polyfill", "../src/index.js"],
   devtool: "cheap-module-eval-source-map",
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
+    chunkFilename: 'js/[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
     publicPath: '/'
   },
   context: path.resolve(__dirname, 'src'),
   devServer: {
-    contentBase: path.resolve(__dirname, 'public/assets'),
+    // contentBase: path.resolve(__dirname, 'public/assets'),
     stats: 'errors-only',
     open: true,
     port: 8080,
@@ -37,9 +37,8 @@ module.exports = {
       template: 'index.html'
     }),
     new ExtractTextPlugin({
-      filename: './style.css'
-    }),
-    extractPlugin
+      filename: 'css/style.css'
+    })
   ],
   module: {
     rules: [
