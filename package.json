@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --env.NODE_ENV=development --progress --open --mode development --config=webpack.config.js",
-    "build": "webpack --mode production --env.NODE_ENV=production --env.production --progress -p --hide-modules --config=webpack.prod.config.js"
+    "build": "webpack --mode production --env.NODE_ENV=production --env.production --progress -p --hide-modules --config=webpack.prod.config.js",
+    "postinstall": "cp .env.example .env"
   },
   "keywords": [
     "reactjs",
